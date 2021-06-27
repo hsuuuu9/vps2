@@ -12,7 +12,7 @@ from urllib.parse import urlparse
 from sqlalchemy import create_engine
 import pandas as pd
 import MySQLdb
-db_path = "mysql://shuichi:V3Bty@45.32.249.213:3306/twitter"
+db_path = "mysql://shuichi47:V3BtyW&U@172.104.91.29:3306/twitter"
 url_sql = urlparse(db_path)
 conn = create_engine('mysql+pymysql://{user}:{password}@{host}:{port}/{database}'.format(host = url_sql.hostname, port=url_sql.port, user = url_sql.username, password= url_sql.password, database = url_sql.path[1:]))
 letter = 'select * from twitter.useragent'
@@ -25,8 +25,8 @@ options.add_argument("--headless")
 options.add_argument("--no-sandbox")
 options.add_argument('--disable-gpu')
 options.add_experimental_option('useAutomationExtension', False)
-#options.add_argument('--user-data-dir=C:\\Users\\Shuichi\\Desktop\\userprofile_main')#user
-#options.add_argument('--profile-directory=Default')
+options.add_argument('--user-data-dir=root/.config/google-chrome')#user
+options.add_argument('--profile-directory=Default')
 options.add_argument('--disable-desktop-notifications')
 options.add_argument("--disable-extensions")
 options.add_argument('--lang=ja')
